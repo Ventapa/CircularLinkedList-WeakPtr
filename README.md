@@ -39,6 +39,8 @@ Run
 
 
 ./nodecycles
+
+
 Expected Output Highlights
 Before deletion: List nodes printed successfully.
 
