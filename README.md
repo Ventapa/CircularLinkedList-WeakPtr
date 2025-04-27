@@ -2,9 +2,6 @@
 
 ## Lab Assignment
 **Lab Title:** Node Cycles and `weak_ptrs`  
-**Date:** 2025-04-22  
-**Professor:** Phillip G. Bradford  
-**Student:** [Your Full Name]
 
 This project demonstrates the use of `std::weak_ptr` in C++ to manage a circular linked list, avoid memory leaks, and safely break node cycles.
 
