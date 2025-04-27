@@ -1,8 +1,10 @@
-# CircularLinkedList-WeakPtr
 # NodeCyclesWeakPtrs
 
 ## Lab Assignment
 **Lab Title:** Node Cycles and `weak_ptrs`  
+**Date:** 2025-04-22  
+**Professor:** Phillip G. Bradford  
+**Student:** [Your Full Name]
 
 This project demonstrates the use of `std::weak_ptr` in C++ to manage a circular linked list, avoid memory leaks, and safely break node cycles.
 
@@ -13,6 +15,7 @@ This project demonstrates the use of `std::weak_ptr` in C++ to manage a circular
 - `LinkedList.h` — Declaration of the `LinkedList` class.
 - `LinkedList.cpp` — Implementation of the `LinkedList` class methods.
 - `main.cpp` — Main program to demonstrate the server-client behavior.
+- `LinkedList_test.cpp` — Unit tests to verify correct linked list behavior.
 - `README.md` — Project overview and build instructions.
 
 ---
@@ -26,31 +29,33 @@ This project demonstrates the use of `std::weak_ptr` in C++ to manage a circular
 
 ---
 
-## Build Instructions
+## Build and Run Instructions
 
 ### Requirements
 - C++11 or higher
 - g++ compiler or any standard C++ compiler
 
-### Compile
+---
+
+### Compile and Run Main Program
 ```bash
 g++ main.cpp LinkedList.cpp -o nodecycles
-Run
-
-
 ./nodecycles
 
 
+Compile and Run Unit Tests
+
+g++ LinkedList.cpp LinkedList_test.cpp -o linkedlist_test
+./linkedlist_test
+
 Expected Output Highlights
-Before deletion: List nodes printed successfully.
-
+Before deletion: List nodes are printed successfully by both server and client.
 After deletion: Client prints "Yipes! shared_ptr not available" for each node.
-
-Node destructors called safely (no memory leaks).
+Node destructors are called safely after deletion, avoiding memory leaks.
 
 Important Concepts
 shared_ptr — Shared ownership of dynamic memory.
-
 weak_ptr — Non-owning reference to break cycles and prevent memory leaks.
+Circular Linked List — Nodes link back to the root node, forming a cycle.
+Memory Safety — Correct use of smart pointers ensures no leaks even with cycles.
 
-Circular Linked List — Nodes link back to the root, forming a cycle.
